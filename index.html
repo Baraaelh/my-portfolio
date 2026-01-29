@@ -3,190 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" type="image/png" href="Imges/favicon.png">
-    <title>Baraa Al Haddad | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Imges/favicon.png">
+    <title>براء الحداد | مصمم ومطور UI/UX & Flutter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🅱</div>
+                <span class="logo-text">براء<span class="logo-highlight">.</span></span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>الرئيسية</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>من أنا</span>
+                </a>
+                <a href="#skills" class="nav-link">
+                    <i class="fas fa-code"></i>
+                    <span>المهارات</span>
+                </a>
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-briefcase"></i>
+                    <span>الأعمال</span>
+                </a>
+                <a href="#contact" class="nav-link contact-nav">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>تواصل معي</span>
+                </a>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-    <header class="navbar">
-        <div class="logo">CREATIVE<span>MIND</span></div>
-        <nav>
-            <ul>
-                <li id="nav-about" class="active">من أنا</li>
-                <li id="nav-skills">مهاراتي</li>
-            </ul>
-        </nav>
-        <div class="contact-btn">تواصل معي</div>
-    </header>
-
-    <section class="hero-section">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
         <div class="hero-container">
-            <div class="hero-text">
-                <h1>مرحباً، أنا <span class="highlight">مصمم ومطور</span></h1>
-                <p>متخصص في تصميم تجربة المستخدم  UI/UX وبناء تطبيقات الويب والموبايل باستخدام Flutter. أحول الأفكار إلى واقع رقمي ملموس.</p>
+            <div class="hero-content">
+                <div class="hero-badge animate__animated animate__fadeInDown">
+                    <span class="badge-text">🚀 متاح للعمل الحر</span>
+                </div>
+                
+                <h1 class="hero-title animate__animated animate__fadeInUp">
+                    <span class="title-line">أنا <span class="gradient-text">براء الحداد</span></span>
+                    <span class="title-line">مصمم ومطور <span class="highlight">UI/UX & Flutter</span></span>
+                </h1>
+                
+                <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                    أحول الأفكار إلى تجارب رقمية استثنائية. متخصص في تصميم واجهات المستخدم 
+                    وتطوير تطبيقات الموبايل والويب التي تدمج بين الجمال والأداء.
+                </p>
+                
+                <div class="hero-cta animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#projects" class="btn-primary">
+                        <span>استعرض أعمالي</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <span>لنتحدث عن مشروعك</span>
+                        <i class="fas fa-comment"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-stats animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="stat">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">مشروع مكتمل</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">سنوات خبرة</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">رضا العملاء</div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="Imges/baraa.png" alt="My Profile">
-            </div>
-        </div>
-    </section>
-
-    <section class="skills-slider">
-        <h2 class="slider-title">مهاراتي التقنية</h2>
-        <div class="slider-wrapper">
-            <button class="arrow prev" onclick="changeSlide(-1)">&#10094;</button>
             
-            <div class="slider-content">
-                <div class="slide active">
-                    <div class="slide-header">
-                        <span class="category-tag">UI/UX Design</span>
-                        <h2>واجهات وتجربة المستخدم</h2>
+            <div class="hero-image-container">
+                <div class="image-wrapper">
+                    <img src="Imges/baraa.png" alt="براء الحداد" class="hero-image">
+                    <div class="image-frame"></div>
+                    <div class="floating-element el-1">
+                        <i class="fab fa-figma"></i>
                     </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">Figma / Adobe XD</div>
-                        <div class="skill-card">User Research</div>
-                        <div class="skill-card">Wireframing</div>
-                        <div class="skill-card">Prototyping</div>
-                        <div class="skill-card">Iterate Designs</div>
+                    <div class="floating-element el-2">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                </div>
-
-                <div class="slide">
-                    <div class="slide-header">
-                        <span class="category-tag">Front-End</span>
-                        <h2>تطوير الويب</h2>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">HTML5</div>
-                        <div class="skill-card">CSS3 / SASS</div>
-                        <div class="skill-card">JavaScript (ES6+)</div>
-                        <div class="skill-card">Responsive Design</div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <div class="slide-header">
-                        <span class="category-tag">Flutter</span>
-                        <h2>تطوير تطبيقات الموبايل</h2>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">Dart Language</div>
-                        <div class="skill-card">Flutter UI Kit</div>
-                        <div class="skill-card">State Management</div>
-                        <div class="skill-card">API Integration</div>
+                    <div class="floating-element el-3">
+                        <i class="fas fa-code"></i>
                     </div>
                 </div>
             </div>
-
-            <button class="arrow next" onclick="changeSlide(1)">&#10095;</button>
         </div>
-    </section>
-
-    <section class="portfolio-grid">
-        <h2 class="section-title">أحدث أعمالي</h2>
-        <div class="projects-container">
-            <div class="project-card" style="background-image: url('Imges/Delivery.png'); background-size: cover; background-position: center;">
-            <div class="project-info">
-            <h3>Smart Delivery App</h3>
-            <p>تصميم واجهة مستخدم ذكية لتطبيقات التوصيل</p>
-            </div>
-           </div>
-
-            <div class="project-card" style="background-image: url('Imges/Charity.png'); background-size: cover;width: 90%;; background-position: center;">
-            <div class="project-info">
-            <h3>Website for a charitable organization</h3>
-            <p >موقع لمؤسسة خيرية</p>           
-           </div>
-           </div>
-            <div class="project-card" style="background-image: url('Imges/To_Do_App.png'); background-size: cover;width: 90%;; background-position: center;">
-            <div class="project-info">
-            <h3>Flutter App & UIUX</h3>
-            <p>تطبيق إدارة مهام يومية</p>           
-           </div>
-           </div>
-            <div class="project-card" style="background-image: url('Imges/pharmacyApp.png'); background-size: cover;width: 90%;; background-position: center;">
-            <div class="project-info">
-            <h3>Flutter App & UIUX</h3>
-            <p>تطبيق لتخزين وبيع المنتجات الطبية في قطاع غزة</p>
-           </div>
-           </div>
-
-            
-        </div>
-    </section>
-
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>دعنا نتواصل</h2>
-            <p>أنا متاح للمشاريع الجديدة والفرص الإبداعية.</p>
-            <div class="social-links">
-                <a href="http://www.linkedin.com/in/براء-الحداد-77766a398" class="social-item">LinkedIn</a>
-                <a href="https://wa.me/0597347588" class="social-item">WhatsApp</a>
-                <a href="mailto:braalhdad701@gmail.com" class="social-item">Email Me</a>
-            </div>
-        </div>
-    </div>
-    <section class="cta-section">
-    <div class="cta-card">
-        <h2>هل لديك مشروع مذهل في بالك؟</h2>
-        <p>أنا متاح حالياً للمشاريع الجديدة. فلنحول فكرتك إلى تجربة مستخدم استثنائية.</p>
-        <button class="contact-btn" onclick="openModal()">لنبدأ العمل معاً</button>
-    </div>
-</section>
-<div id="contactModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2>دعنا نتحدث!</h2>
-        <p>يسعدني التواصل معك ومناقشة مشروعك القادم.</p>
         
-        <div class="social-links">
-            <a href="mailto:braalhdad701@gmail.com" class="social-item email-btn">
-    📧 تواصل معي
-</a>
-
-            <a href="tel:0597347588" class="social-item">
-                0597347588
-            </a>
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="social-item">LinkedIn</a>
-                LinkedIn Profile
-            </a>
-            <a href="https://github.com/Baraaelh" target="_blank" class="social-item">
-                GitHub Profile
-            </a>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>قم بالتمرير</span>
         </div>
-    </div>
-</div>
-    <footer>
-    <div class="footer-content">
-        <div class="footer-logo">Baraa<span>.</span></div>
-        <p>مصمم واجهات مستخدم ومطور ويب شغوف بتحويل الأفكار إلى واقع رقمي مبهر.</p>
-       <footer>
-     
-    <div class="footer-socials">
-        <a href="https://www.linkedin.com/in/براء-الحداد" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Baraaelh" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:braalhdad701@gmail.com" class="social-icon">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="tel:0597347588" class="social-icon">
-            <i class="fas fa-phone"></i>
-        </a>
-    </div>
+    </section>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 براء الحداد | جميع الحقوق محفوظة</p>
-    </div>
-</footer>
-</footer>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">01</span>
+                    <span class="title-text">من <span class="gradient-text">أنا</span></span>
+                </h2>
+                <p class="section-subtitle">مصمم شغوف، مطور مبدع، وقصة نجاح مستمرة</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <img src="Imges/baraa.png" alt="براء الحداد">
+                        <div class="experience-badge">
+                            <div class="badge-content">
+                                <span class="years">3+</span>
+                                <span class="text">سنوات<br>خبرة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h3 class="about-title">مرحباً، أنا براء 👋</h3>
+                    
+                    <div class="about-description">
+                        <p>
+                            مصمم ومطور UI/UX ومتخصص في Flutter من فلسطين. أمتلك شغفاً عميقاً لتحويل 
+                            الأفكار المبتكرة إلى واقع رقمي ملموس.
+                        </p>
+                        <p>
+                            أعمل على تصميم تجارب مستخدم سلسة وجذابة، مع التركيز على التفاصيل الدقيقة 
+                            التي تحدث فرقاً كبيراً في تجربة المستخدم النهائية.
+                        </p>
+                        <p>
+                            كل مشروع أقوم به هو فرصة لخلق شيء مميز، شيء لا يلبي احتياجات العميل فحسب، 
+                            بل يتجاوز توقعاته.
+                        </p>
+                    </div>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>تفكير إبداعي</h4>
+                                <p>أبحث دائماً عن حلول مبتكرة وغير تقليدية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>التركيز على التفاصيل</h4>
+                                <p>كل بكسل له أهميته في التصميم النهائي</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary">
+                        <span>لنعمل معاً</span>
+                        <i class="fas fa-handshake"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">02</span>
+                    <span class="title-text">مهاراتي <span class="gradient-text">التقنية</span></span>
+                </h2>
+                <p class="section-subtitle">أدوات وخبرات أحملها في جعبتي</p>
+            </div>
+            
+            <div class="skills-container">
+                <!-- Skill Category 1 -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="category-title">تصميم UI/UX</h3>
+                    </div>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-figma"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Figma</h4>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 95%"></div>
+                                        </div>
+                                        <span class="level-text">متقدم</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="skill-desc">تصميم واجهات تفاعلية ونماذج أولية</p>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-user-friends"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>أبحاث المستخدم</h4>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 85%"></div>
+                                        </div>
+                                        <span class="level-text">متقدم</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="skill-desc">تحليل سلوك المستخدم وتصميم تجارب مخصصة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Category 2 -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="category-title">تطوير الويب</h3>
+                    </div>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>HTML5 & CSS3</h4>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 90%"></div>
+                                        </div>
+                                        <span class="level-text">متقدم</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="skill-desc">تطوير واجهات ويب سريعة ومتجاوبة</p>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 80%"></div>
+                                        </div>
+                                        <span class="level-text">متوسط</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="skill-desc">إضافة التفاعلية والحركة للواجهات</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Category 3 -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="category-title">تطبيقات الموبايل</h3>
+                    </div>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-flutter"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Flutter & Dart</h4>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 88%"></div>
+                                        </div>
+                                        <span class="level-text">متقدم</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="skill-desc">تطوير تطبيقات أصلية متعددة المنصات</p>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>ربط API</h4>
+                                    <div class="skill-level">
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 75%"></div>
+                                        </div>
+                                        <span class="level-text">متوسط</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="skill-desc">ربط التطبيقات بخوادم وقواعد البيانات</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">03</span>
+                    <span class="title-text">معرض <span class="gradient-text">الأعمال</span></span>
+                </h2>
+                <p class="section-subtitle">أحدث المشاريع التي أشعر بالفخر بها</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Imges/Delivery.png" alt="Smart Delivery App">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">تطبيق توصيل ذكي</h3>
+                        <p class="project-description">
+                            تصميم كامل لواجهة تطبيق توصيل مع تركيز على تجربة المستخدم وتحسين عملية الطلب
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Flutter</span>
+                            <span>UI Design</span>
+                        </div>
+                        
+                        <a href="#" class="project-link">
+                            <span>عرض المشروع</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Imges/Charity.png" alt="Charity Organization Website">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">Web</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">موقع مؤسسة خيرية</h3>
+                        <p class="project-description">
+                            تصميم وتطوير موقع إلكتروني لمؤسسة خيرية مع نظام تبرعات آمن
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX</span>
+                        </div>
+                        
+                        <a href="#" class="project-link">
+                            <span>عرض المشروع</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Imges/To_Do_App.png" alt="To-Do App">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">تطبيق إدارة المهام</h3>
+                        <p class="project-description">
+                            تطبيق Flutter لإدارة المهام اليومية مع ميزات متقدمة ومزامنة سحابية
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                        </div>
+                        
+                        <a href="#" class="project-link">
+                            <span>عرض المشروع</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Imges/pharmacyApp.png" alt="Pharmacy App">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3 class="project-title">تطبيق صيدلية</h3>
+                        <p class="project-description">
+                            تطبيق متكامل لإدارة الصيدليات مع نظام جرد ومبيعات متقدم
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>API</span>
+                            <span>Database</span>
+                        </div>
+                        
+                        <a href="#" class="project-link">
+                            <span>عرض المشروع</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta">
+                <a href="#contact" class="btn-primary btn-large">
+                    <span>هل لديك مشروع في بالك؟</span>
+                    <i class="fas fa-rocket"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">04</span>
+                    <span class="title-text">لنتواصل <span class="gradient-text">معاً</span></span>
+                </h2>
+                <p class="section-subtitle">أنا متحمس لسماع فكرتك التالية</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-title">دعنا نبني شيئاً رائعاً معاً</h3>
+                    
+                    <p class="contact-description">
+                        سواء كان لديك مشروع محدد في ذهنك أو تحتاج إلى استشارة، 
+                        أنا هنا لمساعدتك في تحقيق رؤيتك.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:braalhdad701@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">البريد الإلكتروني</span>
+                                <span class="method-value">braalhdad701@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:0597347588" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">الهاتف / واتساب</span>
+                                <span class="method-value">0597347588</span>
+                            </div>
+                        </a>
+                        
+                        <a href="http://www.linkedin.com/in/براء-الحداد-77766a398" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">لينكد إن</span>
+                                <span class="method-value">براء الحداد</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/Baraaelh" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://wa.me/0597347588" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/yourusername" target="_blank" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://www.behance.net/yourprofile" target="_blank" class="social-link">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" placeholder="أدخل اسمك" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" placeholder="example@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">نوع المشروع</label>
+                            <select id="subject" required>
+                                <option value="">اختر نوع المشروع</option>
+                                <option value="design">تصميم UI/UX</option>
+                                <option value="web">تطوير موقع ويب</option>
+                                <option value="mobile">تطبيق موبايل</option>
+                                <option value="consultation">استشارة</option>
+                                <option value="other">آخر</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" placeholder="أخبرني أكثر عن مشروعك..." rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span>إرسال الرسالة</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">🅱</div>
+                    <div class="logo-text">
+                        <span>براء<span class="logo-highlight">.</span></span>
+                        <span class="logo-subtitle">مصمم ومطور</span>
+                    </div>
+                </div>
+                
+                <p class="footer-quote">
+                    "الإبداع هو الذكاء وهو يلهو" - ألبرت أينشتاين
+                </p>
+                
+                <div class="footer-nav">
+                    <a href="#home">الرئيسية</a>
+                    <a href="#about">من أنا</a>
+                    <a href="#skills">المهارات</a>
+                    <a href="#projects">الأعمال</a>
+                    <a href="#contact">تواصل</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="http://www.linkedin.com/in/براء-الحداد-77766a398" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Baraaelh" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:braalhdad701@gmail.com" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/0597347588" target="_blank" class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2026 براء الحداد. جميع الحقوق محفوظة.</p>
+                    <p class="footer-love">صنع ب ❤️ في فلسطين</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>

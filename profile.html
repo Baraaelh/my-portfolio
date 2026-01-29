@@ -1,192 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" type="image/png" href="Imges/favicon.png">
-    <title>Baraa Al Haddad | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header class="navbar">
-        <div class="logo">CREATIVE<span>MIND</span></div>
-        <nav>
-            <ul>
-                <li id="nav-about" class="active">من أنا</li>
-                <li id="nav-skills">مهاراتي</li>
-            </ul>
-        </nav>
-        <div class="contact-btn">تواصل معي</div>
-    </header>
-
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-text">
-                <h1>مرحباً، أنا <span class="highlight">مصمم ومطور</span></h1>
-                <p>متخصص في تصميم تجربة المستخدم  UI/UX وبناء تطبيقات الويب والموبايل باستخدام Flutter. أحول الأفكار إلى واقع رقمي ملموس.</p>
-            </div>
-            <div class="hero-image">
-                <img src="Imges/baraa.png" alt="My Profile">
-            </div>
-        </div>
-    </section>
-
-    <section class="skills-slider">
-        <h2 class="slider-title">مهاراتي التقنية</h2>
-        <div class="slider-wrapper">
-            <button class="arrow prev" onclick="changeSlide(-1)">&#10094;</button>
-            
-            <div class="slider-content">
-                <div class="slide active">
-                    <div class="slide-header">
-                        <span class="category-tag">UI/UX Design</span>
-                        <h2>واجهات وتجربة المستخدم</h2>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">Figma / Adobe XD</div>
-                        <div class="skill-card">User Research</div>
-                        <div class="skill-card">Wireframing</div>
-                        <div class="skill-card">Prototyping</div>
-                        <div class="skill-card">Iterate Designs</div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <div class="slide-header">
-                        <span class="category-tag">Front-End</span>
-                        <h2>تطوير الويب</h2>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">HTML5</div>
-                        <div class="skill-card">CSS3 / SASS</div>
-                        <div class="skill-card">JavaScript (ES6+)</div>
-                        <div class="skill-card">Responsive Design</div>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <div class="slide-header">
-                        <span class="category-tag">Flutter</span>
-                        <h2>تطوير تطبيقات الموبايل</h2>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-card">Dart Language</div>
-                        <div class="skill-card">Flutter UI Kit</div>
-                        <div class="skill-card">State Management</div>
-                        <div class="skill-card">API Integration</div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="arrow next" onclick="changeSlide(1)">&#10095;</button>
-        </div>
-    </section>
-
-    <section class="portfolio-grid">
-        <h2 class="section-title">أحدث أعمالي</h2>
-        <div class="projects-container">
-            <div class="project-card" style="background-image: url('Imges/Delivery.png'); background-size: cover; background-position: center;">
-            <div class="project-info">
-            <h3>Smart Delivery App</h3>
-            <p>تصميم واجهة مستخدم ذكية لتطبيقات التوصيل</p>
-            </div>
-           </div>
-
-            <div class="project-card" style="background-image: url('Imges/Charity.png'); background-size: cover;width: 90%;; background-position: center;">
-            <div class="project-info">
-            <h3>Website for a charitable organization</h3>
-            <p >موقع لمؤسسة خيرية</p>           
-           </div>
-           </div>
-            <div class="project-card" style="background-image: url('Imges/To_Do_App.png'); background-size: cover;width: 90%;; background-position: center;">
-            <div class="project-info">
-            <h3>Flutter App & UIUX</h3>
-            <p>تطبيق إدارة مهام يومية</p>           
-           </div>
-           </div>
-            <div class="project-card" style="background-image: url('Imges/pharmacyApp.png'); background-size: cover;width: 90%;; background-position: center;">
-            <div class="project-info">
-            <h3>Flutter App & UIUX</h3>
-            <p>تطبيق لتخزين وبيع المنتجات الطبية في قطاع غزة</p>
-           </div>
-           </div>
-
-            
-        </div>
-    </section>
-
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>دعنا نتواصل</h2>
-            <p>أنا متاح للمشاريع الجديدة والفرص الإبداعية.</p>
-            <div class="social-links">
-                <a href="http://www.linkedin.com/in/براء-الحداد-77766a398" class="social-item">LinkedIn</a>
-                <a href="https://wa.me/0597347588" class="social-item">WhatsApp</a>
-                <a href="mailto:braalhdad701@gmail.com" class="social-item">Email Me</a>
-            </div>
-        </div>
-    </div>
-    <section class="cta-section">
-    <div class="cta-card">
-        <h2>هل لديك مشروع مذهل في بالك؟</h2>
-        <p>أنا متاح حالياً للمشاريع الجديدة. فلنحول فكرتك إلى تجربة مستخدم استثنائية.</p>
-        <button class="contact-btn" onclick="openModal()">لنبدأ العمل معاً</button>
-    </div>
-</section>
-<div id="contactModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2>دعنا نتحدث!</h2>
-        <p>يسعدني التواصل معك ومناقشة مشروعك القادم.</p>
-        
-        <div class="social-links">
-            <a href="mailto:braalhdad701@gmail.com" class="social-item email-btn">
-    📧 تواصل معي
-</a>
-
-            <a href="tel:0597347588" class="social-item">
-                0597347588
-            </a>
-                <a href="http://www.linkedin.com/in/براء-الحداد-77766a398" class="social-item">LinkedIn</a>
-                LinkedIn Profile
-            </a>
-            <a href="https://github.com/Baraaelh" target="_blank" class="social-item">
-                GitHub Profile
-            </a>
-        </div>
-    </div>
-</div>
-    <footer>
-    <div class="footer-content">
-        <div class="footer-logo">Baraa<span>.</span></div>
-        <p>مصمم واجهات مستخدم ومطور ويب شغوف بتحويل الأفكار إلى واقع رقمي مبهر.</p>
-       <footer>
-     
-    <div class="footer-socials">
-        <a href="http://www.linkedin.com/in/براء-الحداد-77766a398" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Baraaelh" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:braalhdad701@gmail.com" class="social-icon">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="tel:0597347588" class="social-icon">
-            <i class="fas fa-phone"></i>
-        </a>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2026 براء الحداد | جميع الحقوق محفوظة</p>
-    </div>
-</footer>
-</footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>

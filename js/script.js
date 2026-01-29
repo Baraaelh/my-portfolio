@@ -1,153 +1,313 @@
-// --- عناصر الهيدر والسلايدر ---
-const navAbout = document.getElementById('nav-about');
-const navSkills = document.getElementById('nav-skills');
-const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
-
-// --- وظيفة تحديث حالة الهيدر (تغيير الألوان) ---
-function updateNav(activeSection) {
-    if (activeSection === 'about') {
-        navAbout.classList.add('active');
-        navSkills.classList.remove('active');
-    } else {
-        navSkills.classList.add('active');
-        navAbout.classList.remove('active');
-    }
-}
-
-// --- إدارة السلايدر (الأسهم يمين ويسار) ---
-function showSlide(index) {
-    // إخفاء جميع السلايدات
-    slides.forEach(slide => slide.classList.remove('active'));
-    
-    // معالجة الحدود (الدوران)
-    if (index >= slides.length) currentSlide = 0;
-    else if (index < 0) currentSlide = slides.length - 1;
-    else currentSlide = index;
-
-    // إظهار السلايد المختار
-    slides[currentSlide].classList.add('active');
-    
-    // تحديث الهيدر ليصبح "مهاراتي" أزرق لأننا نتفاعل مع السلايدر
-    updateNav('skills');
-}
-
-function changeSlide(direction) {
-    showSlide(currentSlide + direction);
-}
-
-// --- التنقل عند الضغط على الهيدر (Navigation Click) ---
-navAbout.onclick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    updateNav('about');
-};
-
-navSkills.onclick = () => {
-    document.querySelector('.skills-slider').scrollIntoView({ behavior: 'smooth' });
-    updateNav('skills');
-};
-
-// --- إدارة نافذة التواصل (Contact Modal) ---
-const modal = document.getElementById("contactModal");
-const contactBtn = document.querySelector(".contact-btn");
-const closeBtn = document.querySelector(".close-btn");
-
-contactBtn.onclick = () => {
-    modal.style.display = "flex";
-}
-
-closeBtn.onclick = () => {
-    modal.style.display = "none";
-}
-
-// إغلاق النافذة عند الضغط خارجها
-window.onclick = (event) => {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// --- تحديث اللون تلقائياً عند السكرول (Scroll Spy) ---
-window.addEventListener('scroll', () => {
-    const skillsSection = document.querySelector('.skills-slider');
-    const sectionTop = skillsSection.offsetTop;
-    const scrollPosition = window.scrollY + 150; // هامش لتحديد الدقة
-
-    if (scrollPosition >= sectionTop) {
-        updateNav('skills');
-    } else {
-        updateNav('about');
-    }
-}
-
-);
-
-document.addEventListener('DOMContentLoaded', () => {
-    const projects = document.querySelectorAll('.project-card');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
-        });
-    }, { threshold: 0.2 });
-
-    projects.forEach(project => observer.observe(project));
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            closeMobileMenu();
+        }
+    });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+// Mobile Menu System
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const body = document.body;
+
+// إنشاء overlay للقائمة
+const navOverlay = document.createElement('div');
+navOverlay.className = 'nav-overlay';
+document.body.appendChild(navOverlay);
+
+// فتح القائمة
+function openMobileMenu() {
+    if (!navLinks || !menuToggle) return;
     
-    // 1. إدارة المودال (النافذة المنبثقة)
-    const modal = document.getElementById("contactModal");
-    const contactBtns = document.querySelectorAll(".contact-btn"); // سيطبق على كل زر تواصل
-    const closeBtn = document.querySelector(".close-btn");
+    navLinks.classList.add('active');
+    navOverlay.classList.add('active');
+    body.style.overflow = 'hidden';
+    menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+    menuToggle.classList.add('active');
+}
 
-    // فتح المودال عند الضغط على أي زر تواصل
-    contactBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            modal.style.display = "flex";
-            document.body.style.overflow = "hidden"; // منع التمرير
-        });
-    });
+// إغلاق القائمة
+function closeMobileMenu() {
+    if (!navLinks || !menuToggle) return;
+    
+    navLinks.classList.remove('active');
+    navOverlay.classList.remove('active');
+    body.style.overflow = '';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    menuToggle.classList.remove('active');
+}
 
-    // إغلاق المودال عند الضغط على زر الإغلاق
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            closeModal();
-        });
+// التبديل بين فتح وإغلاق القائمة
+function toggleMobileMenu() {
+    if (!navLinks || !menuToggle) return;
+    
+    if (navLinks.classList.contains('active')) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
     }
+}
 
-    // إغلاق المودال عند الضغط في أي مكان خارج المحتوى
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
+// Mobile Menu Toggle - مع التحقق من وجود العناصر
+if(menuToggle && navLinks) {
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileMenu();
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menuToggle || !navLinks) return;
+    
+    if(!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        closeMobileMenu();
+    }
+});
+
+// Close menu when clicking overlay
+navOverlay.addEventListener('click', closeMobileMenu);
+
+// Close menu when pressing ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
+
+// Update active nav link on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if(window.scrollY >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Back to Top Button
+const backToTopBtn = document.querySelector('.back-to-top');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
         }
     });
 
-    function closeModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
-    // 2. أنيميشن ظهور المشاريع عند السكرول (Scroll Reveal)
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
+// Skill Animation
+const skillCards = document.querySelectorAll('.skill-card');
 
+if (skillCards.length > 0) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target); // تشغيل الأنيميشن مرة واحدة فقط
+            if(entry.isIntersecting) {
+                const levelFill = entry.target.querySelector('.level-fill');
+                if(levelFill) {
+                    // Animate skill level bars
+                    setTimeout(() => {
+                        levelFill.style.transition = 'width 1.5s ease';
+                    }, 300);
+                }
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.3 });
+
+    skillCards.forEach(card => observer.observe(card));
+}
+
+// Project Animation
+const projectCards = document.querySelectorAll('.project-card');
+
+if (projectCards.length > 0) {
+    const projectObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if(entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 200);
+            }
+        });
+    }, { threshold: 0.1 });
 
     projectCards.forEach(card => {
-        observer.observe(card);
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        projectObserver.observe(card);
     });
+
+    // Add hover effect to project cards
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// Contact Form
+const contactForm = document.getElementById('contactForm');
+
+if(contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Here you would typically send the data to a server
+        // For now, we'll just show a success message
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            alert('شكراً لك! سيتم الرد عليك في أقرب وقت.');
+            contactForm.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 1500);
+    });
+}
+
+// Floating Elements Animation
+function animateFloatingElements() {
+    const elements = document.querySelectorAll('.floating-element');
+    
+    if (elements.length > 0) {
+        elements.forEach((el, index) => {
+            el.style.animation = `float 6s ease-in-out ${index * 2}s infinite`;
+        });
+    }
+}
+
+// Initialize animations
+document.addEventListener('DOMContentLoaded', () => {
+    animateFloatingElements();
+    
+    // Add loading animation
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
+    
+    // إضافة الـ CSS للـ overlay إذا لم يكن موجوداً
+    if (!document.querySelector('#nav-overlay-style')) {
+        const style = document.createElement('style');
+        style.id = 'nav-overlay-style';
+        style.textContent = `
+            .nav-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7);
+                backdrop-filter: blur(3px);
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            .nav-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            @media (max-width: 768px) {
+                .nav-links {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 280px;
+                    height: 100vh;
+                    background: #050505;
+                    flex-direction: column;
+                    padding: 80px 20px 30px;
+                    transition: all 0.4s ease;
+                    z-index: 1000;
+                    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+                    border-left: 1px solid rgba(255, 255, 255, 0.05);
+                }
+                .nav-links.active {
+                    right: 0;
+                }
+                .menu-toggle {
+                    display: flex !important;
+                }
+                .nav-links .nav-link {
+                    width: 100%;
+                    padding: 15px 20px;
+                    font-size: 1rem;
+                    justify-content: flex-start;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+});
+
+// Update navbar padding on resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
 });
