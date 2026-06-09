@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="جميع أعمال براء الحداد — مشاريع Flutter وReact.js وتصميم UI/UX">
+    <link rel="icon" type="image/png" href="Imges/favicon.png">
+    <title>الأعمال | براء الحداد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🅱</div>
+                <span class="logo-text">براء<span class="logo-highlight">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="index.html#about" class="nav-link"><i class="fas fa-user"></i><span>من أنا</span></a>
+                <a href="index.html#skills" class="nav-link"><i class="fas fa-code"></i><span>المهارات</span></a>
+                <a href="projects.html" class="nav-link active"><i class="fas fa-briefcase"></i><span>الأعمال</span></a>
+                <a href="services.html" class="nav-link"><i class="fas fa-handshake"></i><span>الخدمات</span></a>
+                <a href="index.html#contact" class="nav-link contact-nav"><i class="fas fa-paper-plane"></i><span>تواصل معي</span></a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container page-hero-inner">
+            <div class="page-breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <span>الأعمال</span>
+            </div>
+            <div class="page-hero-badge"><i class="fas fa-briefcase"></i> معرض الأعمال</div>
+            <h1 class="page-hero-title">جميع <span class="gradient-text">مشاريعي</span></h1>
+            <p class="page-hero-subtitle">7 مشاريع حقيقية تمتد بين تطوير Flutter، React.js، وتصميم UI/UX</p>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section style="background: var(--bg-darker); padding: 80px 0;">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-th"></i> الكل (7)</button>
+                <button class="filter-btn" data-filter="flutter"><i class="fas fa-mobile-alt"></i> Flutter</button>
+                <button class="filter-btn" data-filter="react"><i class="fab fa-react"></i> React.js</button>
+                <button class="filter-btn" data-filter="web"><i class="fas fa-globe"></i> تطوير الويب</button>
+                <button class="filter-btn" data-filter="uiux"><i class="fas fa-palette"></i> UI/UX</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-all-grid">
+
+                <!-- Camera System -->
+                <div class="project-card" data-category="flutter mobile desktop">
+                    <div class="project-image">
+                        <div class="proj-visual proj-visual--camera">
+                            <div class="cam-mockup">
+                                <div class="cam-title-bar"><i class="fas fa-broadcast-tower"></i><span>LIVE PRODUCTION</span></div>
+                                <div class="cam-grid">
+                                    <div class="cam-cell active"><i class="fas fa-video"></i><span>CAM 1</span><div class="cam-live-dot"></div></div>
+                                    <div class="cam-cell"><i class="fas fa-video"></i><span>CAM 2</span></div>
+                                    <div class="cam-cell"><i class="fas fa-video"></i><span>CAM 3</span></div>
+                                    <div class="cam-cell"><i class="fas fa-video"></i><span>CAM 4</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-tags"><span class="tag">Flutter</span><span class="tag">WebRTC</span><span class="tag">Firebase</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number-badge">Flutter • 2024</div>
+                        <h3 class="project-title">نظام التحكم بالكاميرات والبث المباشر</h3>
+                        <p class="project-description">نظام بث احترافي للتحكم في 4-8 كاميرات مع خلط صوت/فيديو ولقطات فورية</p>
+                        <div class="project-tech"><span>Flutter</span><span>WebRTC</span><span>Socket.IO</span><span>FFmpeg</span></div>
+                        <a href="project-camera.html" class="project-link"><span>عرض التفاصيل</span><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Raj3li -->
+                <div class="project-card" data-category="flutter mobile">
+                    <div class="project-image">
+                        <div class="proj-visual proj-visual--raj3li">
+                            <div class="map-mockup">
+                                <div class="map-bg"></div>
+                                <div class="map-road-h"></div>
+                                <div class="map-road-v"></div>
+                                <div class="map-pin"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="map-pin-found"><i class="fas fa-search"></i></div>
+                                <div class="map-notification">تم إيجاد تطابق!</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-tags"><span class="tag">Flutter</span><span class="tag">AI</span><span class="tag">Firebase</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number-badge">Flutter • 2024</div>
+                        <h3 class="project-title">تطبيق "راجعلي" للمفقودات</h3>
+                        <p class="project-description">منصة مجتمعية تستخدم الذكاء الاصطناعي لمطابقة المفقودات بدقة 85%+</p>
+                        <div class="project-tech"><span>Flutter</span><span>TensorFlow Lite</span><span>Google Maps</span><span>Algolia</span></div>
+                        <a href="project-raj3li.html" class="project-link"><span>عرض التفاصيل</span><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="project-card" data-category="react web">
+                    <div class="project-image">
+                        <div class="proj-visual proj-visual--ecommerce">
+                            <div class="shop-mockup">
+                                <div class="shop-header">
+                                    <i class="fas fa-shopping-cart shop-cart-icon"></i>
+                                    <div class="shop-search"></div>
+                                    <i class="fas fa-search shop-cart-icon"></i>
+                                </div>
+                                <div class="shop-grid">
+                                    <div class="shop-product"><i class="fas fa-laptop"></i><span class="shop-product-price">$999</span></div>
+                                    <div class="shop-product featured"><i class="fas fa-mobile-alt"></i><span class="shop-product-price">$699</span></div>
+                                    <div class="shop-product"><i class="fas fa-headphones"></i><span class="shop-product-price">$299</span></div>
+                                    <div class="shop-product"><i class="fas fa-tablet-alt"></i><span class="shop-product-price">$499</span></div>
+                                    <div class="shop-product featured"><i class="fas fa-tv"></i><span class="shop-product-price">$799</span></div>
+                                    <div class="shop-product"><i class="fas fa-camera"></i><span class="shop-product-price">$399</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-tags"><span class="tag">React.js</span><span class="tag">Redux</span><span class="tag">Stripe</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number-badge">React.js • 2024</div>
+                        <h3 class="project-title">متجر إلكترونيات متكامل</h3>
+                        <p class="project-description">منصة تجارة إلكترونية بـ 9 صفحات، فلترة متقدمة، ونظام دفع Stripe</p>
+                        <div class="project-tech"><span>React.js 18</span><span>Redux Toolkit</span><span>Tailwind CSS</span><span>Stripe</span></div>
+                        <a href="project-ecommerce.html" class="project-link"><span>عرض التفاصيل</span><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Delivery App -->
+                <div class="project-card" data-category="uiux flutter mobile">
+                    <div class="project-image">
+                        <img src="Imges/Delivery.png" alt="Smart Delivery App" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="project-overlay">
+                            <div class="project-tags"><span class="tag">UI/UX</span><span class="tag">Flutter</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number-badge">UI/UX • 2023</div>
+                        <h3 class="project-title">تطبيق توصيل ذكي</h3>
+                        <p class="project-description">تصميم كامل لواجهة تطبيق توصيل مع تركيز على تجربة المستخدم</p>
+                        <div class="project-tech"><span>Figma</span><span>Flutter</span><span>UI Design</span></div>
+                        <a href="#" class="project-link"><span>عرض التصميم</span><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Charity Website -->
+                <div class="project-card" data-category="web uiux">
+                    <div class="project-image">
+                        <img src="Imges/Charity.png" alt="Charity Website" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="project-overlay">
+                            <div class="project-tags"><span class="tag">Web</span><span class="tag">UI/UX</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number-badge">Web • 2023</div>
+                        <h3 class="project-title">موقع مؤسسة خيرية</h3>
+                        <p class="project-description">تصميم وتطوير موقع لمؤسسة خيرية مع نظام تبرعات آمن</p>
+                        <div class="project-tech"><span>HTML/CSS</span><span>JavaScript</span><span>UI/UX</span></div>
+                        <a href="https://www.figma.com/design/MuRl8RRuoNpGDKdc3X0b07/Untitled" target="_blank" class="project-link"><span>عرض المشروع</span><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Todo App -->
+                <div class="project-card" data-category="flutter mobile">
+                    <div class="project-image">
+                        <img src="Imges/To_Do_App.png" alt="Todo App" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="project-overlay">
+                            <div class="project-tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number-badge">Flutter • 2023</div>
+                        <h3 class="project-title">تطبيق إدارة المهام</h3>
+                        <p class="project-description">تطبيق Flutter لإدارة المهام اليومية مع مزامنة سحابية</p>
+                        <div class="project-tech"><span>Flutter</span><span>Dart</span><span>Firebase</span></div>
+                        <a href="#" class="project-link"><span>عرض المشروع</span><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- Pharmacy App -->
+                <div class="project-card" data-category="flutter mobile uiux">
+                    <div class="project-image">
+                        <img src="Imges/pharmacyApp.png" alt="Pharmacy App" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="project-overlay">
+                            <div class="project-tags"><span class="tag">Flutter</span><span class="tag">UI/UX</span></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-number-badge">Flutter • 2023</div>
+                        <h3 class="project-title">تطبيق صيدلية</h3>
+                        <p class="project-description">تطبيق متكامل لإدارة الصيدليات مع نظام جرد ومبيعات متقدم</p>
+                        <div class="project-tech"><span>Flutter</span><span>API</span><span>Database</span></div>
+                        <a href="https://www.figma.com/design/Ghv1qFhOrtJzOPbva77xev/pharmacyApp" target="_blank" class="project-link"><span>عرض المشروع</span><i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">هل لديك مشروع في بالك؟</h2>
+                <p class="cta-subtitle">لنتحدث عنه ونحوله إلى واقع مميز</p>
+                <div class="cta-actions">
+                    <a href="index.html#contact" class="cta-btn-white"><i class="fas fa-paper-plane"></i> تواصل معي الآن</a>
+                    <a href="services.html" class="cta-btn-outline"><i class="fas fa-handshake"></i> استعرض خدماتي</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">🅱</div>
+                    <div class="logo-text"><span>براء<span class="logo-highlight">.</span></span><span class="logo-subtitle">مطور Flutter & React.js</span></div>
+                </div>
+                <div class="footer-nav">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="projects.html">الأعمال</a>
+                    <a href="services.html">الخدمات</a>
+                    <a href="index.html#contact">تواصل</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 براء الحداد. جميع الحقوق محفوظة.</p>
+                    <p class="footer-love">صنع ب ❤️ في فلسطين</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

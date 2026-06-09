@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="متجر إلكترونيات متكامل بـ React.js — 9 صفحات، Redux، Stripe، لوحة تحكم">
+    <link rel="icon" type="image/png" href="Imges/favicon.png">
+    <title>متجر الإلكترونيات | براء الحداد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        :root { --project-accent: #9C27B0; }
+        .project-detail-hero { background: linear-gradient(135deg, #0d0014 0%, #1a0029 50%, #0d0014 100%); }
+        .feature-card-icon { background: linear-gradient(135deg, #6A1B9A, #AB47BC); }
+        .tech-badge i { color: #9C27B0; }
+        .tech-badge:hover { border-color: #9C27B0; background: rgba(156,39,176,0.05); }
+        .step-number { background: linear-gradient(135deg, #6A1B9A, #AB47BC); }
+        .project-hero-category { background: rgba(156,39,176,0.1); color: #AB47BC; border-color: rgba(156,39,176,0.3); }
+        .stat-v2-number { background: linear-gradient(135deg, #9C27B0, #CE93D8); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .pages-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .page-item { background: var(--bg-card); border: 1px solid rgba(156,39,176,0.2); border-radius: var(--radius-lg); padding: 18px 20px; display: flex; align-items: center; gap: 12px; transition: var(--transition-smooth); }
+        .page-item:hover { border-color: #9C27B0; transform: translateY(-3px); }
+        .page-item i { color: #9C27B0; font-size: 1.1rem; }
+        .page-item span { font-size: 0.9rem; font-weight: 600; color: var(--text-white); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><div class="logo-icon">🅱</div><span class="logo-text">براء<span class="logo-highlight">.</span></span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i><span>الأعمال</span></a>
+                <a href="services.html" class="nav-link"><i class="fas fa-handshake"></i><span>الخدمات</span></a>
+                <a href="index.html#contact" class="nav-link contact-nav"><i class="fas fa-paper-plane"></i><span>تواصل معي</span></a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="project-detail-hero">
+        <div class="container project-hero-grid">
+            <div>
+                <div class="page-breadcrumb" style="justify-content:flex-start;margin-bottom:20px;">
+                    <a href="index.html">الرئيسية</a><span>/</span>
+                    <a href="projects.html">الأعمال</a><span>/</span>
+                    <span>متجر الإلكترونيات</span>
+                </div>
+                <div class="project-hero-meta">
+                    <span class="project-hero-category">React.js 18</span>
+                    <span class="project-hero-category">Redux Toolkit</span>
+                    <span class="project-hero-category" style="background:rgba(76,175,80,0.1);color:#4CAF50;border-color:rgba(76,175,80,0.3);">✓ مكتمل</span>
+                    <span class="project-hero-year">2024</span>
+                </div>
+                <h1 class="project-hero-title">متجر إلكترونيات<br><span style="color:#AB47BC;">متكامل</span> بـ React.js</h1>
+                <p class="project-hero-desc">
+                    منصة تجارة إلكترونية احترافية لمنتجات الإلكترونيات مع 9 صفحات كاملة، فلترة متقدمة متعددة المعايير، عربة تسوق، نظام دفع Stripe، ولوحة تحكم للمدير.
+                </p>
+                <div class="project-hero-actions">
+                    <a href="https://github.com/Baraaelh" target="_blank" class="btn-primary" style="background: linear-gradient(135deg, #6A1B9A, #AB47BC);"><i class="fab fa-github"></i> عرض الكود على GitHub</a>
+                    <a href="index.html#contact" class="btn-secondary" style="border-color:#9C27B0; color:#AB47BC;"><i class="fas fa-desktop"></i> طلب عرض مباشر</a>
+                </div>
+            </div>
+            <div class="project-hero-visual">
+                <div class="proj-visual proj-visual--ecommerce" style="height:100%;">
+                    <div class="shop-mockup">
+                        <div class="shop-header" style="width:220px;">
+                            <i class="fas fa-shopping-cart shop-cart-icon"></i>
+                            <div class="shop-search" style="flex:1;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;"></div>
+                            <i class="fas fa-user shop-cart-icon"></i>
+                        </div>
+                        <div class="shop-grid">
+                            <div class="shop-product"><i class="fas fa-laptop"></i><span class="shop-product-price">$999</span></div>
+                            <div class="shop-product featured"><i class="fas fa-mobile-alt"></i><span class="shop-product-price">$699</span></div>
+                            <div class="shop-product"><i class="fas fa-headphones"></i><span class="shop-product-price">$299</span></div>
+                            <div class="shop-product featured"><i class="fas fa-tv"></i><span class="shop-product-price">$799</span></div>
+                            <div class="shop-product"><i class="fas fa-tablet-alt"></i><span class="shop-product-price">$499</span></div>
+                            <div class="shop-product"><i class="fas fa-camera"></i><span class="shop-product-price">$399</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">01</span><span class="title-text">نظرة <span class="gradient-text">عامة</span></span></h2>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <p>متجر إلكترونيات متكامل مبني بـ React.js 18 مع أحدث المكتبات والأدوات. المتجر يغطي كامل تجربة التسوق من تصفح المنتجات وحتى إتمام الدفع وتتبع الطلب.</p>
+                    <p>يتميز بفلترة متقدمة تشمل الفئة، النطاق السعري، العلامة التجارية، المواصفات التقنية — كل ذلك في الوقت الفعلي. يدعم التطبيق PWA، محسّن للـ SEO، ومصمم بمعايير Core Web Vitals.</p>
+                    <p>لوحة تحكم المدير تتيح إدارة المنتجات والطلبات، تتبع المخزون، وعرض التحليلات بشكل مرئي — كل ذلك بدون تحديث الصفحة.</p>
+                </div>
+                <div class="overview-sidebar">
+                    <div class="info-card"><p class="info-card-label">Framework</p><p class="info-card-value">React.js 18 + Vite</p></div>
+                    <div class="info-card"><p class="info-card-label">الحالة</p><p class="info-card-value" style="color:#4CAF50;">✓ مكتمل</p></div>
+                    <div class="info-card"><p class="info-card-label">عدد الصفحات</p><p class="info-card-value">9 صفحات كاملة</p></div>
+                    <div class="info-card"><p class="info-card-label">نظام الدفع</p><p class="info-card-value">Stripe + COD</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">02</span><span class="title-text">المزايا <span class="gradient-text">الجوهرية</span></span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-filter"></i></div>
+                    <h3 class="feature-card-title">فلترة متقدمة</h3>
+                    <p class="feature-card-desc">فلترة متزامنة بالفئة، السعر، العلامة التجارية، والمواصفات. النتائج تتحدث فورياً دون تحميل الصفحة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="feature-card-title">عربة تسوق ذكية</h3>
+                    <p class="feature-card-desc">Redux Toolkit يدير حالة السلة بشكل كامل مع إمكانية تعديل الكميات، حفظ السلة، وأكواد الخصم.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fab fa-stripe"></i></div>
+                    <h3 class="feature-card-title">دفع آمن بـ Stripe</h3>
+                    <p class="feature-card-desc">تكامل Stripe كامل يدعم بطاقات الائتمان، الدفع النقدي، وعدة عملات مع حماية 3D Secure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="feature-card-title">لوحة تحكم المدير</h3>
+                    <p class="feature-card-desc">إدارة المنتجات والطلبات والمستخدمين، تتبع المخزون، وتحليلات مبيعات بصرية.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="feature-card-title">PWA متكاملة</h3>
+                    <p class="feature-card-desc">يعمل على المتصفح والموبايل كتطبيق أصلي مع دعم العمل في حالة الاتصال المحدود.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 class="feature-card-title">أداء عالٍ</h3>
+                    <p class="feature-card-desc">تحميل كسول للصور، تخزين مؤقت ذكي، وتقسيم الكود — Lighthouse Score 90+.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pages Built -->
+    <section style="background: var(--bg-dark); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">03</span><span class="title-text">الصفحات <span class="gradient-text">المبنية</span></span></h2>
+                <p class="section-subtitle">9 صفحات مترابطة لتجربة تسوق متكاملة</p>
+            </div>
+            <div class="pages-list">
+                <div class="page-item"><i class="fas fa-home"></i><span>الصفحة الرئيسية</span></div>
+                <div class="page-item"><i class="fas fa-store"></i><span>صفحة المتجر</span></div>
+                <div class="page-item"><i class="fas fa-box"></i><span>تفاصيل المنتج</span></div>
+                <div class="page-item"><i class="fas fa-shopping-cart"></i><span>سلة التسوق</span></div>
+                <div class="page-item"><i class="fas fa-credit-card"></i><span>صفحة الدفع</span></div>
+                <div class="page-item"><i class="fas fa-user-circle"></i><span>حساب المستخدم</span></div>
+                <div class="page-item"><i class="fas fa-info-circle"></i><span>من نحن</span></div>
+                <div class="page-item"><i class="fas fa-envelope"></i><span>تواصل معنا</span></div>
+                <div class="page-item"><i class="fas fa-tachometer-alt"></i><span>لوحة التحكم</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">04</span><span class="title-text">التقنيات <span class="gradient-text">المستخدمة</span></span></h2>
+            </div>
+            <div class="tech-stack-grid">
+                <div class="tech-badge"><i class="fab fa-react"></i> React.js 18 + Vite</div>
+                <div class="tech-badge"><i class="fas fa-layer-group"></i> Redux Toolkit</div>
+                <div class="tech-badge"><i class="fas fa-wind"></i> Tailwind CSS</div>
+                <div class="tech-badge"><i class="fas fa-route"></i> React Router v6</div>
+                <div class="tech-badge"><i class="fas fa-sync"></i> React Query</div>
+                <div class="tech-badge"><i class="fas fa-exchange-alt"></i> Axios</div>
+                <div class="tech-badge"><i class="fab fa-stripe"></i> Stripe API</div>
+                <div class="tech-badge"><i class="fas fa-fire"></i> Firebase / MongoDB</div>
+                <div class="tech-badge"><i class="fas fa-image"></i> Cloudinary</div>
+                <div class="tech-badge"><i class="fab fa-node-js"></i> Node.js + Express</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section style="background: var(--bg-darker); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">05</span><span class="title-text">مقاييس <span class="gradient-text">الأداء</span></span></h2>
+            </div>
+            <div class="stats-showcase">
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="95" data-suffix="+">95+</div>
+                    <p class="stat-v2-label">Lighthouse Score</p>
+                    <p class="stat-v2-desc">أداء عام على متصفح Chrome</p>
+                </div>
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="1" data-suffix=".2s">1.2s</div>
+                    <p class="stat-v2-label">First Contentful Paint</p>
+                    <p class="stat-v2-desc">سرعة تحميل المحتوى الأول</p>
+                </div>
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="9" data-suffix=" صفحات">9</div>
+                    <p class="stat-v2-label">صفحات كاملة</p>
+                    <p class="stat-v2-desc">تغطي كامل رحلة التسوق</p>
+                </div>
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="100" data-suffix="%">100%</div>
+                    <p class="stat-v2-label">متجاوب مع الأجهزة</p>
+                    <p class="stat-v2-desc">من 320px إلى 4K</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section style="background: var(--bg-dark); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">06</span><span class="title-text">خطة <span class="gradient-text">التطوير</span></span></h2>
+                <p class="section-subtitle">المزايا القادمة في الإصدارات المستقبلية</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <span class="step-icon">🔍</span>
+                    <h3 class="step-title">بحث بالصورة</h3>
+                    <p class="step-desc">البحث عن منتجات بالصورة بدلاً من النص باستخدام الذكاء الاصطناعي</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-icon">🤖</span>
+                    <h3 class="step-title">توصيات ذكية</h3>
+                    <p class="step-desc">نظام توصية يقترح المنتجات بناءً على سلوك التصفح والشراء</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-icon">🌍</span>
+                    <h3 class="step-title">دعم متعدد اللغات</h3>
+                    <p class="step-desc">دعم العربية والإنجليزية مع تحويل العملات تلقائياً</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-icon">📱</span>
+                    <h3 class="step-title">تطبيق React Native</h3>
+                    <p class="step-desc">نسخة موبايل أصلية لـ iOS وAndroid بنفس تجربة الويب</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card" style="background: linear-gradient(135deg, #4A148C, #9C27B0);">
+                <h2 class="cta-title">تريد متجراً مشابهاً؟</h2>
+                <p class="cta-subtitle">أطور لك متجراً إلكترونياً احترافياً مخصصاً لعملك</p>
+                <div class="cta-actions">
+                    <a href="index.html#contact" class="cta-btn-white"><i class="fas fa-comments"></i> ناقشني عن مشروعك</a>
+                    <a href="https://github.com/Baraaelh" target="_blank" class="cta-btn-outline"><i class="fab fa-github"></i> عرض GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><div class="logo-icon">🅱</div><div class="logo-text"><span>براء<span class="logo-highlight">.</span></span><span class="logo-subtitle">مطور Flutter & React.js</span></div></div>
+                <div class="footer-nav"><a href="index.html">الرئيسية</a><a href="projects.html">الأعمال</a><a href="services.html">الخدمات</a><a href="index.html#contact">تواصل</a></div>
+                <div class="footer-bottom"><p>&copy; 2026 براء الحداد. جميع الحقوق محفوظة.</p><p class="footer-love">صنع ب ❤️ في فلسطين</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

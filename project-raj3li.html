@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تطبيق راجعلي — منصة المفقودات الذكية التي تستخدم الذكاء الاصطناعي لإعادة المفقودات لأصحابها">
+    <link rel="icon" type="image/png" href="Imges/favicon.png">
+    <title>تطبيق راجعلي | براء الحداد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        :root { --project-accent: #4CAF50; }
+        .project-detail-hero { background: linear-gradient(135deg, #020d02 0%, #041a04 50%, #020d02 100%); }
+        .feature-card-icon { background: linear-gradient(135deg, #2E7D32, #66BB6A); }
+        .tech-badge i { color: #4CAF50; }
+        .tech-badge:hover { border-color: #4CAF50; background: rgba(76,175,80,0.05); }
+        .step-number { background: linear-gradient(135deg, #2E7D32, #66BB6A); }
+        .project-hero-category { background: rgba(76,175,80,0.1); color: #4CAF50; border-color: rgba(76,175,80,0.3); }
+        .stat-v2-number { background: linear-gradient(135deg, #4CAF50, #81C784); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><div class="logo-icon">🅱</div><span class="logo-text">براء<span class="logo-highlight">.</span></span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i><span>الأعمال</span></a>
+                <a href="services.html" class="nav-link"><i class="fas fa-handshake"></i><span>الخدمات</span></a>
+                <a href="index.html#contact" class="nav-link contact-nav"><i class="fas fa-paper-plane"></i><span>تواصل معي</span></a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="project-detail-hero">
+        <div class="container project-hero-grid">
+            <div>
+                <div class="page-breadcrumb" style="justify-content:flex-start;margin-bottom:20px;">
+                    <a href="index.html">الرئيسية</a><span>/</span>
+                    <a href="projects.html">الأعمال</a><span>/</span>
+                    <span>راجعلي</span>
+                </div>
+                <div class="project-hero-meta">
+                    <span class="project-hero-category">Flutter & Dart</span>
+                    <span class="project-hero-category">AI Matching</span>
+                    <span class="project-hero-category" style="background:rgba(255,152,0,0.1);color:#FF9800;border-color:rgba(255,152,0,0.3);">🔧 قيد التطوير</span>
+                    <span class="project-hero-year">2024</span>
+                </div>
+                <h1 class="project-hero-title">تطبيق <span style="color:#4CAF50;">راجعلي</span><br>للمفقودات الذكي</h1>
+                <p class="project-hero-desc">
+                    منصة مجتمعية تساعد الناس في إيجاد المفقودات وإعادتها لأصحابها من خلال خوارزميات مطابقة ذكية تجمع بين معالجة اللغة الطبيعية، التعرف على الصور، والموقع الجغرافي.
+                </p>
+                <div class="project-hero-actions">
+                    <a href="index.html#contact" class="btn-primary" style="background: linear-gradient(135deg, #2E7D32, #66BB6A);"><i class="fas fa-bell"></i> سجّل للوصول المبكر</a>
+                    <a href="index.html#contact" class="btn-secondary" style="border-color:#4CAF50; color:#4CAF50;"><i class="fas fa-comments"></i> تواصل معنا</a>
+                </div>
+            </div>
+            <div class="project-hero-visual">
+                <div class="proj-visual proj-visual--raj3li" style="height:100%;">
+                    <div class="map-mockup" style="width:220px;height:200px;">
+                        <div class="map-bg"></div>
+                        <div class="map-road-h"></div>
+                        <div class="map-road-v"></div>
+                        <div class="map-pin"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="map-pin-found" style="font-size:1.5rem;"><i class="fas fa-search"></i></div>
+                        <div class="map-match-line"></div>
+                        <div class="map-notification">تم إيجاد تطابق بدقة 92%!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">01</span><span class="title-text">فكرة <span class="gradient-text">التطبيق</span></span></h2>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <p>كل يوم يفقد الناس هواتفهم، محافظهم، مفاتيحهم، وأغراضاً ثمينة. المشكلة؟ لا توجد منصة موثوقة تربط من فقد شيئاً بمن عثر عليه.</p>
+                    <p>"راجعلي" يحل هذه المشكلة من خلال منصة مجتمعية ذكية: من فقد شيئاً ينشر تفاصيله، ومن وجد شيئاً يرفع صورته، والذكاء الاصطناعي يطابق بينهما تلقائياً خلال دقائق.</p>
+                    <p>النظام يعتمد على TensorFlow Lite للتعرف على الصور، وAlgolia للبحث النصي المتقدم، وGoogle Maps للتوطين الجغرافي — كل ذلك في تطبيق Flutter سريع وأنيق.</p>
+                </div>
+                <div class="overview-sidebar">
+                    <div class="info-card"><p class="info-card-label">المنصة</p><p class="info-card-value">Flutter (iOS + Android)</p></div>
+                    <div class="info-card"><p class="info-card-label">الحالة</p><p class="info-card-value" style="color:#FF9800;">⏳ قيد التطوير</p></div>
+                    <div class="info-card"><p class="info-card-label">دقة المطابقة</p><p class="info-card-value" style="color:#4CAF50;">85%+</p></div>
+                    <div class="info-card"><p class="info-card-label">التقنيات</p><p class="info-card-value">Flutter · Firebase · TensorFlow · Algolia</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">02</span><span class="title-text">كيف <span class="gradient-text">يعمل؟</span></span></h2>
+                <p class="section-subtitle">4 خطوات بسيطة لإعادة المفقودات</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <span class="step-icon">📤</span>
+                    <h3 class="step-title">النشر</h3>
+                    <p class="step-desc">ارفع تفاصيل ما فقدته أو وجدته مع صورة ووصف دقيق وموقع على الخريطة</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <span class="step-icon">🤖</span>
+                    <h3 class="step-title">المطابقة الذكية</h3>
+                    <p class="step-desc">الذكاء الاصطناعي يفحص الصور والأوصاف والمواقع الجغرافية لإيجاد تطابق في ثوانٍ</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <span class="step-icon">🔔</span>
+                    <h3 class="step-title">الإشعار الفوري</h3>
+                    <p class="step-desc">تصلك إشعارات فورية عند العثور على تطابق محتمل مع نسبة الدقة</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <span class="step-icon">🤝</span>
+                    <h3 class="step-title">الاسترداد الآمن</h3>
+                    <p class="step-desc">تواصل آمن داخل التطبيق مع التحقق من الهوية وإتمام عملية الاسترداد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Matching -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">03</span><span class="title-text">نظام المطابقة <span class="gradient-text">الذكي</span></span></h2>
+                <p class="section-subtitle">6 محاور يعتمدها الذكاء الاصطناعي لضمان أعلى دقة</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-camera"></i></div>
+                    <h3 class="feature-card-title">التعرف على الصور</h3>
+                    <p class="feature-card-desc">TensorFlow Lite يحلل الصور ويقارن بين الألوان والأشكال والعلامات المميزة بدقة 90%+</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3 class="feature-card-title">التوطين الجغرافي</h3>
+                    <p class="feature-card-desc">Google Maps API يحسب المسافة بين موقع الفقدان وموقع الإيجاد ضمن نطاق مرن قابل للتخصيص</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-language"></i></div>
+                    <h3 class="feature-card-title">معالجة اللغة الطبيعية</h3>
+                    <p class="feature-card-desc">Algolia يفهم الوصف النصي ويطابق بين الأوصاف المتشابهة بغض النظر عن الصياغة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-clock"></i></div>
+                    <h3 class="feature-card-title">تطابق الإطار الزمني</h3>
+                    <p class="feature-card-desc">يأخذ بعين الاعتبار وقت الفقدان ووقت الإيجاد مع نافذة زمنية مرنة قابلة للضبط</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-tags"></i></div>
+                    <h3 class="feature-card-title">تصنيف الفئات</h3>
+                    <p class="feature-card-desc">تصنيف تلقائي ضمن فئات (إلكترونيات، مجوهرات، وثائق، ملابس...) لتسريع المطابقة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="feature-card-title">التحقق الآمن</h3>
+                    <p class="feature-card-desc">نظام تحقق من الهوية وتاريخ المستخدم لضمان أمان عملية الاسترداد لكلا الطرفين</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">04</span><span class="title-text">التقنيات <span class="gradient-text">المستخدمة</span></span></h2>
+            </div>
+            <div class="tech-stack-grid">
+                <div class="tech-badge"><i class="fas fa-mobile-alt"></i> Flutter (iOS + Android)</div>
+                <div class="tech-badge"><i class="fas fa-fire"></i> Firebase Auth & Firestore</div>
+                <div class="tech-badge"><i class="fas fa-map"></i> Google Maps API</div>
+                <div class="tech-badge"><i class="fas fa-brain"></i> TensorFlow Lite</div>
+                <div class="tech-badge"><i class="fas fa-search"></i> Algolia Search</div>
+                <div class="tech-badge"><i class="fas fa-bell"></i> Firebase Cloud Messaging</div>
+                <div class="tech-badge"><i class="fas fa-cloud"></i> Firebase Storage</div>
+                <div class="tech-badge"><i class="fas fa-comments"></i> Firebase Realtime Chat</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section style="background: var(--bg-dark); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">05</span><span class="title-text">الأرقام <span class="gradient-text">المتوقعة</span></span></h2>
+                <p class="section-subtitle">مؤشرات الأداء المستهدفة عند الإطلاق</p>
+            </div>
+            <div class="stats-showcase">
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="85" data-suffix="%">85%</div>
+                    <p class="stat-v2-label">دقة المطابقة</p>
+                    <p class="stat-v2-desc">نسبة نجاح خوارزمية الذكاء الاصطناعي</p>
+                </div>
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="2" data-suffix=" ساعة">2 ساعة</div>
+                    <p class="stat-v2-label">متوسط وقت الاسترداد</p>
+                    <p class="stat-v2-desc">من النشر حتى العثور على تطابق</p>
+                </div>
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="90" data-suffix="%">90%</div>
+                    <p class="stat-v2-label">رضا المستخدمين</p>
+                    <p class="stat-v2-desc">معدل رضا المستخدمين في مرحلة التجربة</p>
+                </div>
+                <div class="stat-item-v2">
+                    <div class="stat-v2-number" data-count="5" data-suffix=" ثوانٍ">5 ثوانٍ</div>
+                    <p class="stat-v2-label">سرعة المطابقة</p>
+                    <p class="stat-v2-desc">زمن تحليل ومطابقة البلاغ الجديد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">06</span><span class="title-text">الأسئلة <span class="gradient-text">الشائعة</span></span></h2>
+            </div>
+            <div class="faq-list" style="max-width:800px;margin:0 auto;">
+                <div class="faq-item open">
+                    <div class="faq-question">كيف يتحقق التطبيق من أن المُسترِد هو الصاحب الحقيقي؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>يطلب التطبيق تفاصيل تعريفية لا يمكن لأحد سواك معرفتها (مثل الرقم التسلسلي، الصور القديمة، العلامات المميزة)، إضافةً إلى نظام تحقق من الهوية ونقاط السمعة لكل مستخدم.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل التطبيق مجاني للاستخدام؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>نعم، الاستخدام الأساسي مجاني تماماً. سيكون هناك اشتراك اختياري للمزايا المتقدمة مثل البحث المتوسع والتنبيهات الفورية المتعددة.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">ماذا يحدث إذا وجدت شيئاً ولا أعرف صاحبه؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>ارفع تفاصيل ما وجدت والتطبيق سيعمل تلقائياً على مطابقته مع البلاغات المسجلة. ستصلك إشعارات فورية عندما ينشر أحد عن هذا الغرض.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">ما مدى أمان التواصل بين المستخدمين؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>التواصل يتم داخل التطبيق فقط ولا يُشارك أي معلومات اتصال حتى يتم التحقق من الهوية من الجانبين. يمكن إجراء التسليم في أماكن عامة موصى بها.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Early Access -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card" style="background: linear-gradient(135deg, #1B5E20, #4CAF50);">
+                <h2 class="cta-title">كن من أوائل المستخدمين</h2>
+                <p class="cta-subtitle">سجّل الآن للحصول على وصول مبكر حصري وإشعار فور الإطلاق</p>
+                <div class="cta-actions">
+                    <a href="index.html#contact" class="cta-btn-white"><i class="fas fa-bell"></i> سجّل للوصول المبكر</a>
+                    <a href="projects.html" class="cta-btn-outline"><i class="fas fa-arrow-right"></i> العودة للأعمال</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><div class="logo-icon">🅱</div><div class="logo-text"><span>براء<span class="logo-highlight">.</span></span><span class="logo-subtitle">مطور Flutter & React.js</span></div></div>
+                <div class="footer-nav"><a href="index.html">الرئيسية</a><a href="projects.html">الأعمال</a><a href="services.html">الخدمات</a><a href="index.html#contact">تواصل</a></div>
+                <div class="footer-bottom"><p>&copy; 2026 براء الحداد. جميع الحقوق محفوظة.</p><p class="footer-love">صنع ب ❤️ في فلسطين</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

@@ -102,6 +102,10 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+.highlight {
+    color: var(--primary-color);
+}
+
 /* ===== BUTTONS ===== */
 .btn-primary, .btn-secondary {
     display: inline-flex;

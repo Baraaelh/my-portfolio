@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نظام التحكم بالكاميرات والبث المباشر — مشروع Flutter احترافي لإنتاج الفيديو الحي">
+    <link rel="icon" type="image/png" href="Imges/favicon.png">
+    <title>نظام البث المباشر | براء الحداد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        :root { --project-accent: #FF5722; --project-accent-light: rgba(255,87,34,0.15); }
+        .project-detail-hero { background: linear-gradient(135deg, #0d0500 0%, #1f0c00 50%, #0d0500 100%); }
+        .feature-card-icon { background: linear-gradient(135deg, #FF5722, #FF8C00); }
+        .tech-badge i { color: #FF5722; }
+        .tech-badge:hover { border-color: #FF5722; background: rgba(255,87,34,0.05); }
+        .step-number { background: linear-gradient(135deg, #FF5722, #FF8C00); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><div class="logo-icon">🅱</div><span class="logo-text">براء<span class="logo-highlight">.</span></span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i><span>الأعمال</span></a>
+                <a href="services.html" class="nav-link"><i class="fas fa-handshake"></i><span>الخدمات</span></a>
+                <a href="index.html#contact" class="nav-link contact-nav"><i class="fas fa-paper-plane"></i><span>تواصل معي</span></a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-detail-hero">
+        <div class="container project-hero-grid">
+            <div>
+                <div class="page-breadcrumb" style="justify-content:flex-start; margin-bottom:20px;">
+                    <a href="index.html">الرئيسية</a><span>/</span>
+                    <a href="projects.html">الأعمال</a><span>/</span>
+                    <span>نظام البث المباشر</span>
+                </div>
+                <div class="project-hero-meta">
+                    <span class="project-hero-category">Flutter & Dart</span>
+                    <span class="project-hero-category" style="background:rgba(255,87,34,0.1);color:#FF5722;border-color:rgba(255,87,34,0.3);">WebRTC</span>
+                    <span class="project-hero-year">2024</span>
+                </div>
+                <h1 class="project-hero-title">نظام التحكم بالكاميرات<br><span class="gradient-text">والبث المباشر</span></h1>
+                <p class="project-hero-desc">
+                    نظام إنتاج بث احترافي يتيح التحكم الكامل في 4-8 كاميرات أثناء الفعاليات المباشرة، الاستوديوهات، وجلسات البث. يوفر خلط الصوت والفيديو، تأثيرات فورية، وواجهة مخرج متكاملة.
+                </p>
+                <div class="project-hero-actions">
+                    <a href="index.html#contact" class="btn-primary"><i class="fas fa-envelope"></i> طلب عرض توضيحي</a>
+                    <a href="index.html#contact" class="btn-secondary"><i class="fas fa-dollar-sign"></i> احصل على عرض سعر</a>
+                </div>
+            </div>
+            <div class="project-hero-visual">
+                <div class="proj-visual proj-visual--camera" style="height:100%;">
+                    <div class="cam-mockup">
+                        <div class="cam-title-bar"><i class="fas fa-broadcast-tower"></i><span>LIVE PRODUCTION SYSTEM</span></div>
+                        <div class="cam-grid">
+                            <div class="cam-cell active"><i class="fas fa-video"></i><span>CAM 1 — MAIN</span><div class="cam-live-dot"></div></div>
+                            <div class="cam-cell"><i class="fas fa-video"></i><span>CAM 2 — CLOSE</span></div>
+                            <div class="cam-cell"><i class="fas fa-video"></i><span>CAM 3 — WIDE</span></div>
+                            <div class="cam-cell"><i class="fas fa-video"></i><span>CAM 4 — PTZ</span></div>
+                        </div>
+                        <div class="cam-controls">
+                            <div class="cam-btn"><i class="fas fa-play"></i></div>
+                            <div class="cam-btn"><i class="fas fa-stop"></i></div>
+                            <div class="cam-btn"><i class="fas fa-circle" style="color:#ff3333;"></i></div>
+                            <div class="cam-btn"><i class="fas fa-cog"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">01</span><span class="title-text">نظرة <span class="gradient-text">عامة</span></span></h2>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <p>نظام إنتاج بث مباشر شامل مصمم للمحترفين الذين يحتاجون إلى التحكم في بيئات متعددة الكاميرات. يدمج النظام بين تقنيات WebRTC للبث الفوري، وSocket.IO للتحكم في الوقت الفعلي، وFFmpeg لمعالجة الفيديو.</p>
+                    <p>المنظومة تدعم الفعاليات المباشرة الكبيرة كالمؤتمرات والحفلات الموسيقية ومنصات البث، إضافةً إلى استوديوهات التلفزيون والإنتاج المؤسسي، مع واجهة مخرج احترافية تتيح الانتقال السلس بين الكاميرات وإضافة التأثيرات والتحكم الكامل في كل جوانب الإنتاج.</p>
+                </div>
+                <div class="overview-sidebar">
+                    <div class="info-card"><p class="info-card-label">المنصة</p><p class="info-card-value">Flutter (Mobile + Desktop)</p></div>
+                    <div class="info-card"><p class="info-card-label">الحالة</p><p class="info-card-value" style="color:#4CAF50;">✓ مكتمل</p></div>
+                    <div class="info-card"><p class="info-card-label">الكاميرات المدعومة</p><p class="info-card-value">4 — 8 كاميرات</p></div>
+                    <div class="info-card"><p class="info-card-label">التقنيات الرئيسية</p><p class="info-card-value">Flutter · WebRTC · Socket.IO · Firebase</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">02</span><span class="title-text">المزايا <span class="gradient-text">الرئيسية</span></span></h2>
+                <p class="section-subtitle">ست ميزات محورية تجعل النظام الأول من نوعه</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-video"></i></div>
+                    <h3 class="feature-card-title">تحكم متعدد الكاميرات</h3>
+                    <p class="feature-card-desc">إدارة 4-8 كاميرات في وقت واحد مع لوحة تحكم مركزية، والانتقال الفوري بين الكاميرات بضغطة واحدة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-random"></i></div>
+                    <h3 class="feature-card-title">مزج الصوت والفيديو</h3>
+                    <p class="feature-card-desc">خلط احترافي للصوت والفيديو في الوقت الفعلي مع إضافة تأثيرات وانتقالات سينمائية.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h3 class="feature-card-title">تحكم PTZ</h3>
+                    <p class="feature-card-desc">تحكم كامل في كاميرات PTZ (تحريك + إمالة + تكبير) عن بُعد مباشرةً من الواجهة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-redo-alt"></i></div>
+                    <h3 class="feature-card-title">نظام الإعادة الفورية</h3>
+                    <p class="feature-card-desc">تسجيل وإعادة تشغيل اللحظات المهمة فورياً دون انقطاع البث المباشر.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3 class="feature-card-title">مراقبة متعددة الشاشات</h3>
+                    <p class="feature-card-desc">شاشة Multi-view تعرض جميع مصادر الكاميرات في وقت واحد مع مؤشرات الحالة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <h3 class="feature-card-title">تسجيل وبث متزامن</h3>
+                    <p class="feature-card-desc">تسجيل محلي وبث RTMP لمنصات يوتيوب وتويتش وفيسبوك في نفس الوقت.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">03</span><span class="title-text">التقنيات <span class="gradient-text">المستخدمة</span></span></h2>
+            </div>
+            <div class="tech-stack-grid">
+                <div class="tech-badge"><i class="fas fa-mobile-alt"></i> Flutter & Dart</div>
+                <div class="tech-badge"><i class="fas fa-video"></i> WebRTC</div>
+                <div class="tech-badge"><i class="fas fa-plug"></i> Socket.IO</div>
+                <div class="tech-badge"><i class="fas fa-film"></i> FFmpeg</div>
+                <div class="tech-badge"><i class="fas fa-fire"></i> Firebase Auth & Firestore</div>
+                <div class="tech-badge"><i class="fas fa-stream"></i> RTMP Protocol</div>
+                <div class="tech-badge"><i class="fas fa-database"></i> SQLite (Local)</div>
+                <div class="tech-badge"><i class="fas fa-lock"></i> AES Encryption</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">04</span><span class="title-text">مقارنة <span class="gradient-text">الإصدارات</span></span></h2>
+                <p class="section-subtitle">اختر الإصدار المناسب لاحتياجاتك</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align:right;">الميزة</th>
+                            <th>Basic</th>
+                            <th class="plan-header">Pro ⭐</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>عدد الكاميرات</td><td>2</td><td>4</td><td>8+</td></tr>
+                        <tr><td>جودة البث</td><td>720p</td><td>1080p</td><td>4K</td></tr>
+                        <tr><td>التحكم PTZ</td><td class="cross">✕</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>مزج متعدد المصادر</td><td class="cross">✕</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>الإعادة الفورية</td><td class="cross">✕</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>تسجيل محلي</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+                        <tr><td>بث RTMP متزامن</td><td class="cross">✕</td><td class="partial">منصة واحدة</td><td class="check">غير محدود</td></tr>
+                        <tr><td>لوحة تحكم المدير</td><td class="cross">✕</td><td class="partial">محدودة</td><td class="check">كاملة</td></tr>
+                        <tr><td>API تكامل</td><td class="cross">✕</td><td class="cross">✕</td><td class="check">✓</td></tr>
+                        <tr><td>الدعم الفني</td><td>بريد إلكتروني</td><td>أولوية</td><td>مخصص 24/7</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section style="background: var(--bg-dark); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">05</span><span class="title-text">حالات <span class="gradient-text">الاستخدام</span></span></h2>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card"><span class="use-case-icon">📺</span><h4 class="use-case-title">استوديوهات التلفزيون</h4><p class="use-case-desc">إنتاج البرامج والنشرات الإخبارية المباشرة</p></div>
+                <div class="use-case-card"><span class="use-case-icon">🎪</span><h4 class="use-case-title">منظمو الفعاليات</h4><p class="use-case-desc">مؤتمرات وحفلات ومعارض كبرى</p></div>
+                <div class="use-case-card"><span class="use-case-icon">🎮</span><h4 class="use-case-title">البث الترفيهي</h4><p class="use-case-desc">بث الألعاب والترفيه على منصات البث</p></div>
+                <div class="use-case-card"><span class="use-case-icon">🎓</span><h4 class="use-case-title">التعليم الرقمي</h4><p class="use-case-desc">تصوير المحاضرات والدورات التعليمية</p></div>
+                <div class="use-case-card"><span class="use-case-icon">⛪</span><h4 class="use-case-title">دور العبادة</h4><p class="use-case-desc">بث الشعائر الدينية للمشتركين عن بُعد</p></div>
+                <div class="use-case-card"><span class="use-case-icon">🏃</span><h4 class="use-case-title">البث الرياضي</h4><p class="use-case-desc">تغطية المباريات والبطولات المحلية</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card" style="background: linear-gradient(135deg, #FF5722, #FF8C00);">
+                <h2 class="cta-title">جاهز لرفع مستوى إنتاجك؟</h2>
+                <p class="cta-subtitle">احصل على عرض توضيحي مجاني أو استشارة تقنية مع براء</p>
+                <div class="cta-actions">
+                    <a href="index.html#contact" class="cta-btn-white"><i class="fas fa-calendar-check"></i> احجز عرضاً توضيحياً</a>
+                    <a href="services.html" class="cta-btn-outline"><i class="fas fa-list"></i> عرض جميع الخدمات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><div class="logo-icon">🅱</div><div class="logo-text"><span>براء<span class="logo-highlight">.</span></span><span class="logo-subtitle">مطور Flutter & React.js</span></div></div>
+                <div class="footer-nav">
+                    <a href="index.html">الرئيسية</a><a href="projects.html">الأعمال</a><a href="services.html">الخدمات</a><a href="index.html#contact">تواصل</a>
+                </div>
+                <div class="footer-bottom"><p>&copy; 2026 براء الحداد. جميع الحقوق محفوظة.</p><p class="footer-love">صنع ب ❤️ في فلسطين</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

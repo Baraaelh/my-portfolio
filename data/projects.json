@@ -1,0 +1,99 @@
+{
+  "projects": [
+    {
+      "id": "camera-system",
+      "title": "نظام التحكم بالكاميرات والبث المباشر",
+      "subtitle": "Camera Control & Live Production System",
+      "category": ["flutter", "mobile", "desktop"],
+      "tags": ["Flutter", "WebRTC", "Socket.IO", "FFmpeg", "Firebase", "RTMP"],
+      "description": "نظام بث احترافي للتحكم في 4-8 كاميرات أثناء الفعاليات المباشرة والاستوديوهات وجلسات البث",
+      "color": "#FF5722",
+      "link": "project-camera.html",
+      "featured": true,
+      "status": "completed",
+      "year": "2024"
+    },
+    {
+      "id": "raj3li",
+      "title": "تطبيق راجعلي للمفقودات",
+      "subtitle": "Raj3li - Lost & Found Mobile App",
+      "category": ["flutter", "mobile"],
+      "tags": ["Flutter", "Firebase", "Google Maps", "TensorFlow Lite", "Algolia"],
+      "description": "منصة مجتمعية ذكية تساعد الناس في إيجاد المفقودات وإعادتها لأصحابها",
+      "color": "#4CAF50",
+      "link": "project-raj3li.html",
+      "featured": true,
+      "status": "in-development",
+      "year": "2024"
+    },
+    {
+      "id": "electronics-store",
+      "title": "متجر إلكترونيات (React.js)",
+      "subtitle": "Electronics E-Commerce Store",
+      "category": ["react", "web"],
+      "tags": ["React.js 18", "Redux Toolkit", "Tailwind CSS", "Node.js", "MongoDB", "Stripe"],
+      "description": "منصة تجارة إلكترونية متكاملة لمنتجات الإلكترونيات مع نظام دفع متكامل",
+      "color": "#9C27B0",
+      "link": "project-ecommerce.html",
+      "featured": true,
+      "status": "completed",
+      "year": "2024"
+    },
+    {
+      "id": "delivery-app",
+      "title": "تطبيق توصيل ذكي",
+      "subtitle": "Smart Delivery App",
+      "category": ["uiux", "mobile"],
+      "tags": ["Figma", "Flutter", "UI Design"],
+      "description": "تصميم كامل لواجهة تطبيق توصيل مع تركيز على تجربة المستخدم",
+      "color": "#2196F3",
+      "image": "Imges/Delivery.png",
+      "link": "#",
+      "featured": false,
+      "status": "design-only",
+      "year": "2023"
+    },
+    {
+      "id": "charity-website",
+      "title": "موقع مؤسسة خيرية",
+      "subtitle": "Charity Organization Website",
+      "category": ["web", "uiux"],
+      "tags": ["HTML/CSS", "JavaScript", "UI/UX"],
+      "description": "تصميم وتطوير موقع إلكتروني لمؤسسة خيرية مع نظام تبرعات آمن",
+      "color": "#00BCD4",
+      "image": "Imges/Charity.png",
+      "link": "https://www.figma.com/design/MuRl8RRuoNpGDKdc3X0b07/Untitled",
+      "featured": false,
+      "status": "completed",
+      "year": "2023"
+    },
+    {
+      "id": "todo-app",
+      "title": "تطبيق إدارة المهام",
+      "subtitle": "Task Management App",
+      "category": ["flutter", "mobile"],
+      "tags": ["Flutter", "Dart", "Firebase"],
+      "description": "تطبيق Flutter لإدارة المهام اليومية مع مزامنة سحابية",
+      "color": "#FF9800",
+      "image": "Imges/To_Do_App.png",
+      "link": "#",
+      "featured": false,
+      "status": "completed",
+      "year": "2023"
+    },
+    {
+      "id": "pharmacy-app",
+      "title": "تطبيق صيدلية",
+      "subtitle": "Pharmacy Management App",
+      "category": ["flutter", "mobile"],
+      "tags": ["Flutter", "API", "Database"],
+      "description": "تطبيق متكامل لإدارة الصيدليات مع نظام جرد ومبيعات متقدم",
+      "color": "#E91E63",
+      "image": "Imges/pharmacyApp.png",
+      "link": "https://www.figma.com/design/Ghv1qFhOrtJzOPbva77xev/pharmacyApp",
+      "featured": false,
+      "status": "completed",
+      "year": "2023"
+    }
+  ]
+}

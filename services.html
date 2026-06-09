@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خدمات براء الحداد — تطوير Flutter، React.js، تصميم UI/UX، واستشارات تقنية">
+    <link rel="icon" type="image/png" href="Imges/favicon.png">
+    <title>الخدمات | براء الحداد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><div class="logo-icon">🅱</div><span class="logo-text">براء<span class="logo-highlight">.</span></span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-briefcase"></i><span>الأعمال</span></a>
+                <a href="services.html" class="nav-link active"><i class="fas fa-handshake"></i><span>الخدمات</span></a>
+                <a href="index.html#contact" class="nav-link contact-nav"><i class="fas fa-paper-plane"></i><span>تواصل معي</span></a>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container page-hero-inner">
+            <div class="page-breadcrumb">
+                <a href="index.html">الرئيسية</a><span>/</span><span>الخدمات</span>
+            </div>
+            <div class="page-hero-badge"><i class="fas fa-handshake"></i> خدماتي الاحترافية</div>
+            <h1 class="page-hero-title">ماذا <span class="gradient-text">أقدّم لك؟</span></h1>
+            <p class="page-hero-subtitle">من تطوير تطبيقات Flutter إلى مواقع React.js وتصميم UI/UX — كل ما تحتاجه لمشروعك الرقمي</p>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">01</span><span class="title-text">قائمة <span class="gradient-text">الخدمات</span></span></h2>
+                <p class="section-subtitle">6 خدمات تقنية متخصصة لتحويل فكرتك إلى واقع</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Flutter Development -->
+                <div class="service-card featured">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #0277BD, #29B6F6);">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-name">تطوير تطبيق Flutter</h3>
+                    <p class="service-desc">تطبيقات موبايل أصلية لـ iOS وAndroid من قاعدة كود واحدة. من التطبيقات البسيطة إلى الأنظمة المعقدة.</p>
+                    <div class="service-price">
+                        <span class="price-amount">$500</span>
+                        <span class="price-currency">USD</span>
+                        <span class="price-note">— يبدأ من</span>
+                    </div>
+                    <ul class="service-features-list">
+                        <li><i class="fas fa-check-circle"></i> iOS + Android من كود واحد</li>
+                        <li><i class="fas fa-check-circle"></i> تكامل Firebase كامل</li>
+                        <li><i class="fas fa-check-circle"></i> واجهة مستخدم احترافية</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة الحالة (Bloc/Riverpod)</li>
+                        <li><i class="fas fa-check-circle"></i> ربط API وقواعد البيانات</li>
+                        <li><i class="fas fa-check-circle"></i> نشر على Store (App Store / Play Store)</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-primary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> طلب خدمة Flutter
+                    </a>
+                </div>
+
+                <!-- React.js Development -->
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #1565C0, #42A5F5);">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="service-name">تطوير موقع React.js</h3>
+                    <p class="service-desc">مواقع وتطبيقات ويب متكاملة وسريعة بـ React.js مع أحدث التقنيات وأفضل ممارسات الأداء.</p>
+                    <div class="service-price">
+                        <span class="price-amount">$400</span>
+                        <span class="price-currency">USD</span>
+                        <span class="price-note">— يبدأ من</span>
+                    </div>
+                    <ul class="service-features-list">
+                        <li><i class="fas fa-check-circle"></i> React.js 18 + Vite</li>
+                        <li><i class="fas fa-check-circle"></i> Redux Toolkit / Zustand</li>
+                        <li><i class="fas fa-check-circle"></i> Tailwind CSS / Material-UI</li>
+                        <li><i class="fas fa-check-circle"></i> متجاوب مع الأجهزة</li>
+                        <li><i class="fas fa-check-circle"></i> تحسين SEO وCore Web Vitals</li>
+                        <li><i class="fas fa-check-circle"></i> نشر على Vercel / Netlify</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-secondary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> طلب موقع React.js
+                    </a>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #6A1B9A, #AB47BC);">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h3 class="service-name">تصميم UI/UX</h3>
+                    <p class="service-desc">تصميم واجهات مستخدم جذابة وتجارب مستخدم سلسة باستخدام Figma مع نموذج أولي تفاعلي.</p>
+                    <div class="service-price">
+                        <span class="price-amount">$200</span>
+                        <span class="price-currency">USD</span>
+                        <span class="price-note">— يبدأ من</span>
+                    </div>
+                    <ul class="service-features-list">
+                        <li><i class="fas fa-check-circle"></i> تصميم Figma كامل</li>
+                        <li><i class="fas fa-check-circle"></i> نموذج أولي تفاعلي</li>
+                        <li><i class="fas fa-check-circle"></i> مكتبة مكونات</li>
+                        <li><i class="fas fa-check-circle"></i> تصميم متجاوب (Mobile + Web)</li>
+                        <li><i class="fas fa-check-circle"></i> ألوان وخطوط وتوكنز</li>
+                        <li><i class="fas fa-check-circle"></i> تسليم ملفات قابلة للتطوير</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-secondary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> طلب تصميم UI/UX
+                    </a>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #E65100, #FF9800);">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-name">متجر إلكتروني</h3>
+                    <p class="service-desc">بناء متجر إلكتروني احترافي متكامل مع نظام دفع، إدارة مخزون، ولوحة تحكم للمدير.</p>
+                    <div class="service-price">
+                        <span class="price-amount">$700</span>
+                        <span class="price-currency">USD</span>
+                        <span class="price-note">— يبدأ من</span>
+                    </div>
+                    <ul class="service-features-list">
+                        <li><i class="fas fa-check-circle"></i> React.js / Next.js</li>
+                        <li><i class="fas fa-check-circle"></i> نظام دفع Stripe / PayPal</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة المخزون والطلبات</li>
+                        <li><i class="fas fa-check-circle"></i> لوحة تحكم المدير</li>
+                        <li><i class="fas fa-check-circle"></i> فلترة وبحث متقدم</li>
+                        <li><i class="fas fa-check-circle"></i> تحسين SEO كامل</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-secondary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> طلب متجر إلكتروني
+                    </a>
+                </div>
+
+                <!-- API Integration -->
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #004D40, #26A69A);">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3 class="service-name">ربط API وتكامل</h3>
+                    <p class="service-desc">ربط تطبيقك بـ APIs خارجية، خدمات السحابة، أو بناء backend خاص بك.</p>
+                    <div class="service-price">
+                        <span class="price-amount">$150</span>
+                        <span class="price-currency">USD</span>
+                        <span class="price-note">— يبدأ من</span>
+                    </div>
+                    <ul class="service-features-list">
+                        <li><i class="fas fa-check-circle"></i> ربط REST API / GraphQL</li>
+                        <li><i class="fas fa-check-circle"></i> Firebase / Supabase</li>
+                        <li><i class="fas fa-check-circle"></i> تكامل خدمات Google</li>
+                        <li><i class="fas fa-check-circle"></i> معالجة أخطاء محكمة</li>
+                        <li><i class="fas fa-check-circle"></i> Caching وتحسين الأداء</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-secondary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> طلب ربط API
+                    </a>
+                </div>
+
+                <!-- Technical Consulting -->
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, #1A237E, #5C6BC0);">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="service-name">استشارة تقنية</h3>
+                    <p class="service-desc">راجعة التصميم المعماري لمشروعك، اختيار التقنيات، حل المشكلات التقنية، وتحسين الكود.</p>
+                    <div class="service-price">
+                        <span class="price-amount">$50</span>
+                        <span class="price-currency">USD</span>
+                        <span class="price-note">— لكل ساعة</span>
+                    </div>
+                    <ul class="service-features-list">
+                        <li><i class="fas fa-check-circle"></i> Code Review مفصّل</li>
+                        <li><i class="fas fa-check-circle"></i> اختيار الـ Stack المناسب</li>
+                        <li><i class="fas fa-check-circle"></i> تحسين الأداء والبنية</li>
+                        <li><i class="fas fa-check-circle"></i> حل المشكلات التقنية</li>
+                        <li><i class="fas fa-check-circle"></i> جلسة استشارة عبر Zoom/Meet</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-secondary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> احجز استشارة
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">02</span><span class="title-text">كيف <span class="gradient-text">أعمل؟</span></span></h2>
+                <p class="section-subtitle">4 خطوات واضحة من الفكرة إلى التسليم</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-step-num">1</div>
+                    <span class="process-step-icon"><i class="fas fa-comments"></i></span>
+                    <h3 class="process-step-title">نقاش الفكرة</h3>
+                    <p class="process-step-desc">نتحدث عن مشروعك، متطلباتك، والجدول الزمني. أقدم لك تقدير أولي مجاناً.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">2</div>
+                    <span class="process-step-icon"><i class="fas fa-pencil-ruler"></i></span>
+                    <h3 class="process-step-title">التخطيط والتصميم</h3>
+                    <p class="process-step-desc">أعدّ wireframes وخطة تطوير مفصلة مع مواعيد تسليم واضحة قبل البدء.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">3</div>
+                    <span class="process-step-icon"><i class="fas fa-code"></i></span>
+                    <h3 class="process-step-title">التطوير والتسليم</h3>
+                    <p class="process-step-desc">أطور بمراحل مع تحديثات دورية. تستطيع رؤية التقدم في كل مرحلة.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-num">4</div>
+                    <span class="process-step-icon"><i class="fas fa-rocket"></i></span>
+                    <h3 class="process-step-title">النشر والدعم</h3>
+                    <p class="process-step-desc">نشر المشروع ودعم مجاني لمدة شهر بعد التسليم لضمان عمله بشكل مثالي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span class="title-number">03</span><span class="title-text">أسئلة <span class="gradient-text">شائعة</span></span></h2>
+            </div>
+            <div class="faq-list" style="max-width:800px;margin:0 auto;">
+                <div class="faq-item open">
+                    <div class="faq-question">كم يستغرق تطوير تطبيق Flutter؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>يعتمد على تعقيد المشروع. التطبيق البسيط 2-4 أسابيع، المتوسط 4-8 أسابيع، والمعقد 8-16 أسبوعاً. أقدم لك جدولاً زمنياً دقيقاً في مرحلة التخطيط.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل يمكنك العمل على مشروع قائم بالفعل؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>نعم، يمكنني الانضمام إلى مشروع قائم لإضافة مزايا جديدة، تحسين الكود، أو إصلاح مشاكل. أبدأ بمراجعة كاملة للكود الحالي.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">ما هي طرق الدفع المقبولة؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>PayPal، حوالة بنكية، أو Western Union. عادةً 50% مقدم عند الاتفاق و50% عند التسليم. للمشاريع الطويلة نحدد دفعات مرحلية.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل تقدم دعماً بعد التسليم؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>نعم، دعم مجاني لمدة 30 يوماً بعد التسليم لإصلاح أي أخطاء. بعد ذلك يتوفر دعم شهري بسعر منفصل.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">هل تعمل مع عملاء من خارج فلسطين؟<i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>بالتأكيد! أعمل مع عملاء من الخليج، أوروبا، وأمريكا الشمالية. التواصل يكون عبر Zoom/WhatsApp/Email وفق توقيتك.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">هل مشروعك جاهز للانطلاق؟</h2>
+                <p class="cta-subtitle">تواصل معي اليوم للحصول على استشارة مجانية وتقدير أولي لمشروعك</p>
+                <div class="cta-actions">
+                    <a href="index.html#contact" class="cta-btn-white"><i class="fas fa-paper-plane"></i> تواصل معي الآن</a>
+                    <a href="https://wa.me/970597347588" target="_blank" class="cta-btn-outline"><i class="fab fa-whatsapp"></i> واتساب مباشر</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><div class="logo-icon">🅱</div><div class="logo-text"><span>براء<span class="logo-highlight">.</span></span><span class="logo-subtitle">مطور Flutter & React.js</span></div></div>
+                <div class="footer-nav"><a href="index.html">الرئيسية</a><a href="projects.html">الأعمال</a><a href="services.html">الخدمات</a><a href="index.html#contact">تواصل</a></div>
+                <div class="footer-social">
+                    <a href="https://github.com/Baraaelh" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="http://www.linkedin.com/in/براء-الحداد-77766a398" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:braalhdad701@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/970597347588" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="footer-bottom"><p>&copy; 2026 براء الحداد. جميع الحقوق محفوظة.</p><p class="footer-love">صنع ب ❤️ في فلسطين</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
